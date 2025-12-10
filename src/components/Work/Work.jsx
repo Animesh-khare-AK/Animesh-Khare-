@@ -60,11 +60,8 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="relative h-screen overflow-hidden bg-[#0f0c1a] font-sans flex flex-col items-center justify-center"
+      className="relative h-screen overflow-hidden font-sans flex flex-col items-center justify-center"
     >
-      {/* Cinematic Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-[#0f0c1a] to-[#0f0c1a]" />
-
       {/* Title */}
       <div className="absolute top-10 z-10 text-center">
         
