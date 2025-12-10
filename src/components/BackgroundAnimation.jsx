@@ -55,9 +55,20 @@ const BackgroundAnimation = () => {
     }
 
     let nodesArray = [];
-    for (let i = 0; i < 120; i++) {
-      nodesArray.push(new Node());
-    }
+    let connectionDistance = 120;
+
+    const initNodes = () => {
+      nodesArray = [];
+      const width = window.innerWidth;
+      const count = width < 768 ? 60 : 120; // Fewer nodes on mobile
+      connectionDistance = width < 768 ? 80 : 120; // Shorter connection distance on mobile
+      
+      for (let i = 0; i < count; i++) {
+        nodesArray.push(new Node());
+      }
+    };
+
+    initNodes();
 
     const connectNodes = () => {
       for (let a = 0; a < nodesArray.length; a++) {
@@ -66,9 +77,9 @@ const BackgroundAnimation = () => {
           let dy = nodesArray[a].y - nodesArray[b].y;
           let d = Math.sqrt(dx * dx + dy * dy);
 
-          if (d < 120) {
+          if (d < connectionDistance) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - d / 120})`;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${1 - d / connectionDistance})`;
             ctx.lineWidth = 1;
             ctx.moveTo(nodesArray[a].x, nodesArray[a].y);
             ctx.lineTo(nodesArray[b].x, nodesArray[b].y);
@@ -92,11 +103,7 @@ const BackgroundAnimation = () => {
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      // Re-initialize nodes on resize to prevent them from bunching up or disappearing
-      nodesArray = [];
-      for (let i = 0; i < 120; i++) {
-        nodesArray.push(new Node());
-      }
+      initNodes();
     };
 
     window.addEventListener('resize', handleResize);

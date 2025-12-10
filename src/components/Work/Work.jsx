@@ -13,9 +13,17 @@ const Work = () => {
   const animationRef = useRef(null);
 
   // --- CONFIGURATION ---
-  const radius = 320; 
-  const cardWidth = 200;
-  const cardHeight = 300;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const radius = isMobile ? 160 : 320; 
+  const cardWidth = isMobile ? 140 : 200;
+  const cardHeight = isMobile ? 210 : 300;
   const numberOfProjects = projects.length;
   const anglePerProject = 360 / numberOfProjects;
 
