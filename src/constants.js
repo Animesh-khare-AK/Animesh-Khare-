@@ -28,12 +28,10 @@ import makhanlalLogo from "./assets/education_logo/Makhanlal_Chaturvedi_National
 import royalPublicLogo from "./assets/education_logo/74638881_2470252119964081_5182851823379152896_n.jpg";
 
 // Project Section Logo's
-import githubdetLogo from "./assets/work_logo/github_det.png";
-import csprepLogo from "./assets/work_logo/cs_prep.png";
-import movierecLogo from "./assets/work_logo/movie_rec.png";
-import taskremLogo from "./assets/work_logo/task_rem.png";
-import npmLogo from "./assets/work_logo/npm.png";
-import webverLogo from "./assets/work_logo/web_dig.png";
+import aiTripPlannerLogo from "./assets/work_logo/AI trip planner.png";
+import studentManagementLogo from "./assets/work_logo/Student_Management_System.png";
+import textBasedGameLogo from "./assets/work_logo/textbasedgame.png";
+import rockPaperScissorLogo from "./assets/work_logo/Rock,papergame.png";
 
 export const SkillsInfo = [
   {
@@ -139,7 +137,7 @@ export const projects = [
     title: "Intellitools (Internship)",
     description:
       "AI utility platform — backend APIs and model integration (Python, FastAPI, Node.js)",
-    image: githubdetLogo,
+    image: "",
     tags: ["Python", "FastAPI", "Node.js", "AI/ML"],
     github: "",
     webapp: "",
@@ -149,7 +147,7 @@ export const projects = [
     title: "Online Chat App",
     description:
       "Real-time messaging app using Node.js, React, WebSocket, JWT and MongoDB.",
-    image: csprepLogo,
+    image: "",
     tags: ["Node.js", "React", "WebSocket", "MongoDB"],
     github: "",
     webapp: "",
@@ -159,7 +157,7 @@ export const projects = [
     title: "AI Trip Planner",
     description:
       "AI-powered itinerary generation using React, Python, Flask and Firebase.",
-    image: movierecLogo,
+    image: aiTripPlannerLogo,
     tags: ["React", "Python", "Flask", "Firebase"],
     github: "",
     webapp: "",
@@ -169,27 +167,28 @@ export const projects = [
     title: "Student Management Web App",
     description:
       "Java/Servlets app with CRUD operations and MySQL integration.",
-    image: npmLogo,
+    image: studentManagementLogo,
     tags: ["Java", "Servlets", "MySQL"],
-    github: "",
+    github: "https://github.com/Animesh-khare-AK/Student-management-system.git",
     webapp: "",
   },
   {
     id: 4,
     title: "Text-Based RPG Game",
     description: "Interactive storytelling game built with HTML/CSS/JS.",
-    image: taskremLogo,
+    image: textBasedGameLogo,
     tags: ["HTML", "CSS", "JavaScript"],
-    github: "",
+    github:
+      "https://github.com/Animesh-khare-AK/Text-Based-Role-Playing-Game.git",
     webapp: "",
   },
   {
     id: 5,
     title: "Rock-Paper-Scissor Game",
     description: "Simple text-based game using HTML/CSS/JS.",
-    image: webverLogo,
+    image: rockPaperScissorLogo,
     tags: ["HTML", "CSS", "JavaScript"],
-    github: "",
+    github: "https://github.com/Animesh-khare-AK/Rock-Paper-Scissor-Game.git",
     webapp: "",
   },
 ];
