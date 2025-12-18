@@ -159,8 +159,9 @@ export const projects = [
       "AI-powered itinerary generation using React, Python, Flask and Firebase.",
     image: aiTripPlannerLogo,
     tags: ["React", "Python", "Flask", "Firebase"],
-    github: "",
-    webapp: "",
+    github: "https://github.com/Animesh-khare-AK/AI-Trip-planner",
+    webapp:
+      "https://ai-trip-planner-oe7dyolsk-animesh-khare-aks-projects.vercel.app",
   },
   {
     id: 3,
